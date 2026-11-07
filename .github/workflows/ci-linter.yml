@@ -1,0 +1,16 @@
+name: Code Linter
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo code
+        uses: actions/checkout@v4
+
+      - name: Install linter
+        run: sudo apt update && sudo apt install -y clang-format
+
+      - name: Run linter
+        run: clang-format --dry-run -Werror c-bye/bye.c

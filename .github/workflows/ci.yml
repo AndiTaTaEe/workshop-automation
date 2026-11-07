@@ -10,6 +10,8 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
 
+    runs-on: ${{ matrix.os }}
+
     steps:
       # Clones the repository code into the virtual machine
       - name: Checkout repository code

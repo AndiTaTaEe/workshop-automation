@@ -2,6 +2,7 @@
 #include <string.h>
 
 char *password = "n0t_saf3_4nyw4y";
+int x = 10;
 
 int main() {
 
